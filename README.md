@@ -24,7 +24,7 @@ conda create -n AlphaFastDown -c omnia -c bioconda -c conda-forge python==3.10 o
 conda activate AlphaFastDown
 python3 -m pip install alphapulldown==1.0.4
 ```
-- Install AlphaFastDown
+- Clone AlphaFastDown repository
 ```
 git clone https://github.com/MIDIfactory/AlphaFastDown.git
 ```
@@ -33,10 +33,10 @@ git clone https://github.com/MIDIfactory/AlphaFastDown.git
 pip install jax==0.4.23 jaxlib==0.4.23+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 
 pip install tensorflow==2.9
 conda install -c anaconda cudnn
-conda install -c conda-forge cuda-toolkit==11.
+conda install -c conda-forge cuda-toolkit==11
 conda install -c nvidia cuda-nvcc
 ```
-CUDA version can change accordingly to your system's GPU, operating system and the actual version of the software. **If CUDA is not installed, the script will use CPU resources automatically**.
+CUDA version can change accordingly to your system's GPU, operating system and the actual version of the software. **If CUDA is not properly installed, the script will use CPU resources automatically**.
 
 ## Usage
 
