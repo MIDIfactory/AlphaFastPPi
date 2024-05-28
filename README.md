@@ -26,6 +26,7 @@ python3 -m pip install alphapulldown==1.0.4
 ```
 - Install AlphaFastDown
 ```
+git clone https://github.com/MIDIfactory/AlphaFastDown.git
 ```
 - To utilize GPUs, which significantly accelerate processing though are not strictly necessary, CUDA should be installed:
 ```
@@ -74,7 +75,7 @@ output_dir
 ```
 2. **Predict the models**:
 ```
-AlphaFastDown.py 
+python3 AlphaFastDown.py 
     --mode <pulldown|all_vs_all>  
     -l proteins.txt \
     -b baits.txt [only for pulldown mode] \
