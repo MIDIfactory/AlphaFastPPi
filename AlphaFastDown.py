@@ -556,7 +556,7 @@ flags.DEFINE_integer(
     "seq_index", None, "Index (number) of sequence in the fasta file to start from", short_name='n'
 )
 flags.DEFINE_boolean(
-    "no_pair_msa", False, "do not pair the MSAs when constructing multimer objects"
+    "no_pair_msa", True, "do not pair the MSAs when constructing multimer objects"
 )
 
 flags.mark_flag_as_required("output_path")
