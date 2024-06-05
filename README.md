@@ -1,9 +1,9 @@
-# AlphaFastDown
+# AlphaFastPPi
 
-AlphaFastDown is a Python package designed to streamline large-scale protein-protein interaction analysis using AlphaFold-Multimer. For each protein combination tested, AlphaFastDown will return a single model.
+AlphaFastPPi is a Python package designed to streamline large-scale protein-protein interaction analysis using AlphaFold-Multimer. For each protein combination tested, AlphaFastPPi will return a single model.
 
 ## Requirments 
-- AlphaFastDown requires the Alphafold databases. 
+- AlphaFastPPi requires the Alphafold databases. 
 If you are using an HPC system (or any system where you lack admin privileges), you can access detailed instructions for downloading the Alphafold databases [here](https://github.com/kalininalab/alphafold_non_docker). The databases are available in two sizes: full (~ 2.62 TB) and reduced (~ 820 GB)
 ```
 git clone https://github.com/kalininalab/alphafold_non_docker
@@ -14,19 +14,19 @@ cd alphafold_non_docker
 
 ## Installation
 
-- Create the AlphaFastDown environment, gathering necessary dependencies:
+- Create the AlphaFastPPi environment, gathering necessary dependencies:
 
 ```
-conda create -n AlphaFastDown -c omnia -c bioconda -c conda-forge python==3.10 openmm==8.0 pdbfixer==1.9 kalign2 cctbx-base pytest importlib_metadata hhsuite
+conda create -n AlphaFastPPi -c omnia -c bioconda -c conda-forge python==3.10 openmm==8.0 pdbfixer==1.9 kalign2 cctbx-base pytest importlib_metadata hhsuite
 ```
-- Activate the AlphaFastDown enviorment and install AlphaPulldown:
+- Activate the AlphaFastPPi enviorment and install AlphaPulldown:
 ```
-conda activate AlphaFastDown
+conda activate AlphaFastPPi
 python3 -m pip install alphapulldown==1.0.4
 ```
-- Clone AlphaFastDown repository
+- Clone AlphaFastPPi repository
 ```
-git clone https://github.com/MIDIfactory/AlphaFastDown.git
+git clone https://github.com/MIDIfactory/AlphaFastPPi.git
 ```
 - To utilize GPUs, which significantly accelerate processing though are not strictly necessary, CUDA should be installed:
 ```
@@ -40,7 +40,7 @@ CUDA version can change accordingly to your system's GPU, operating system and t
 
 ## Usage
 
-AlphaFastDown supports two different modes:
+AlphaFastPPi supports two different modes:
 - **pulldown**: to screen a list of proteins ("baits") against a list of other proteins ("candidates")
 - **all_vs_all**: to model all pairs of a protein list
 
@@ -48,7 +48,7 @@ AlphaFastDown supports two different modes:
 
 1. **Create the MSAs using AlphaPulldown**, compute and store the necessary features for each protein:
 ```
-conda activate AlphaFastDown
+conda activate AlphaFastPPi
 create_individual_features.py \
   --fasta_paths=<fasta file containg all the bait(s) and candidates sequences> \
   --data_dir=<path to alphafold databases> \
@@ -75,7 +75,7 @@ output_dir
 ```
 2. **Predict the models**:
 ```
-python3 AlphaFastDown.py 
+python3 AlphaFastPPi.py 
     --mode <pulldown|all_vs_all>  
     -l proteins.txt \
     -b baits.txt [only for pulldown mode] \
@@ -112,7 +112,7 @@ Additionally, a table named output_name.tsv will be generated, containing the fo
 ## Citation
 
 If our tool is useful to you, please cite:
-- Bellinzona G, Sassera D, Bonvin AMJJ. AlphaFastDown:a fast AlphaFold-Multimer-based pipeline for high-throughput screening. 10.5281/zenodo.11487784
+- Bellinzona G, Sassera D, Bonvin AMJJ. AlphaFastPPi:a fast AlphaFold-Multimer-based pipeline for high-throughput screening. 10.5281/zenodo.11487784
 - Yu D, Chojnowski G, Rosenthal M, Kosinski J. AlphaPulldown-a python package for protein-protein interaction screens using AlphaFold-Multimer. Bioinformatics. 2023;39(1):btac749. doi:10.1093/bioinformatics/btac749 
 
 
