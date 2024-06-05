@@ -108,3 +108,11 @@ Additionally, a table named output_name.tsv will be generated, containing the fo
 - ipTM
 - ipTM+pTM
 - Average plDDT
+
+## Citation
+
+If our tool is useful to you, please cite:
+- Bellinzona G, Sassera D, Bonvin AMJJ. AlphaFastDown:a fast AlphaFold-Multimer-based pipeline for high-throughput screening. 10.5281/zenodo.11487784
+- Yu D, Chojnowski G, Rosenthal M, Kosinski J. AlphaPulldown-a python package for protein-protein interaction screens using AlphaFold-Multimer. Bioinformatics. 2023;39(1):btac749. doi:10.1093/bioinformatics/btac749 
+
+
