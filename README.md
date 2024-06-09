@@ -1,6 +1,6 @@
 # AlphaFastPPi
 
-<p align="center"><img src="https://github.com/MIDIfactory/AlphaFastPPi/blob/88271ed4bd32fa0c11500dabfad1c8bba36e054b/AlphaPPI.png" height="256" /></p>
+<p align="center"><img src="https://github.com/MIDIfactory/AlphaFastPPi/blob/e31e28a4de963a4f5e61c2fab708c153a77e95c3/AlphaPPI.png" height="256" /></p>
 AlphaFastPPi is a Python package designed to streamline large-scale protein-protein interaction analysis using AlphaFold-Multimer. For each protein combination tested, AlphaFastPPi will return a single model.
 
 ## Requirments 
