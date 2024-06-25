@@ -32,7 +32,7 @@ git clone https://github.com/MIDIfactory/AlphaFastPPi.git
 - To utilize GPUs, which significantly accelerate processing though are not strictly necessary, CUDA should be installed:
 ```
 pip install jax==0.4.23 jaxlib==0.4.23+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 
-pip install tensorflow==2.9
+pip install tensorflow[and-cuda]
 conda install -c anaconda cudnn
 conda install -c conda-forge cuda-toolkit==11
 conda install -c nvidia cuda-nvcc
