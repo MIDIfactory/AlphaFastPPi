@@ -110,10 +110,37 @@ Additionally, a table named output_name.tsv will be generated, containing the fo
 - ipTM+pTM
 - Average plDDT
 
+## Example - Pull down experiment
+Input example files are provided in the "example" folder of this repository
+
+1. Compute the MSA using mmseq2
+```
+conda activate AlphaFastPPi
+create_individual_features.py \
+  --fasta_paths=bait.fasta, candidates.fasta \
+  --data_dir=/mnt/datadisk/AlphaFoldDBs \
+  --output_dir=1_fastmsa \ 
+  --max_template_date=2050-01-01 \
+  --use_mmseqs2=True
+```
+2. Structural predictions
+```
+python3 AlphaFastPPi.py 
+    --mode pulldown  
+    -l candidates.txt \
+    -b baits.txt \
+    -d /mnt/datadisk/AlphaFoldDBs 
+    -m 1_fastmsa \
+    -o 2_predictions
+```
+
+
+
+
 ## Citation
 
 If our tool is useful to you, please cite:
-- Bellinzona G, Sassera D, Bonvin AMJJ. AlphaFastPPi:a fast AlphaFold-Multimer-based pipeline for high-throughput screening. 10.5281/zenodo.11487784
+- Bellinzona G, Sassera D, Bonvin AMJJ. Accelerating Protein-Protein Interaction screens with reduced AlphaFold-Multimer sampling. bioRxiv 2024.06.07.597882; doi: https://doi.org/10.1101/2024.06.07.597882
 - Yu D, Chojnowski G, Rosenthal M, Kosinski J. AlphaPulldown-a python package for protein-protein interaction screens using AlphaFold-Multimer. Bioinformatics. 2023;39(1):btac749. doi:10.1093/bioinformatics/btac749 
 
 
