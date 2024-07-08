@@ -128,12 +128,11 @@ create_individual_features.py \
 python3 AlphaFastPPi.py 
     --mode pulldown  
     -l candidates.txt \
-    -b baits.txt \
+    -b bait.txt \
     -d /mnt/datadisk/AlphaFoldDBs 
     -m 1_fastmsa \
     -o 2_predictions
 ```
-
 
 
 
