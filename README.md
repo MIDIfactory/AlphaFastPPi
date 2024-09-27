@@ -3,6 +3,13 @@
 <p align="center"><img src="https://github.com/MIDIfactory/AlphaFastPPi/blob/e31e28a4de963a4f5e61c2fab708c153a77e95c3/AlphaPPI.png" height="256" /></p>
 AlphaFastPPi is a Python package designed to streamline large-scale protein-protein interaction analysis using AlphaFold-Multimer. For each protein combination tested, AlphaFastPPi will return a single model.
 
+## **Now the same result can be achieved using [AlphaPulldown](https://github.com/KosinskiLab/AlphaPulldown)**
+To obtain a single model in the pulldown version of AlphaPulldown v.1.0.4 use options --num_predictions_per_model=1, --model_names=model_1_multimer_v3, --num_cycle=1, --nopair_ms when running run_multimer_job.py.
+
+Note that slightly different results can be achieved if a different model_name is used.
+
+
+
 ## Requirments 
 - AlphaFastPPi requires the Alphafold databases. 
 If you are using an HPC system (or any system where you lack admin privileges), you can access detailed instructions for downloading the Alphafold databases [here](https://github.com/kalininalab/alphafold_non_docker). The databases are available in two sizes: full (~ 2.62 TB) and reduced (~ 820 GB)
